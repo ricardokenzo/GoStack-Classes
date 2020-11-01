@@ -25,7 +25,7 @@ class AuthenticateUserService {
 
         @inject('HashProvider')
         private hashProvider: IHashProvider,
-    ) {}
+) {}
 
     public async execute({ email, password }: IRequest): Promise<Response> {
         const user = await this.usersRepository.findByEmail(email);
